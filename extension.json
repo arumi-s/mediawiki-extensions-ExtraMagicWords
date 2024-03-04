@@ -2,7 +2,7 @@
 	"name": "ExtraMagicWords",
 	"version": "1.0.0",
 	"author": ["Sakura Arumi"],
-	"url": "",
+	"url": "https://github.com/arumi-s/mediawiki-extensions-ExtraMagicWords",
 	"descriptionmsg": "extramagicwords_desc",
 	"license-name": "MIT",
 	"type": "parserhook",
