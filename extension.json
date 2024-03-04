@@ -1,0 +1,39 @@
+{
+	"name": "ExtraMagicWords",
+	"version": "1.0.0",
+	"author": ["Sakura Arumi"],
+	"url": "",
+	"descriptionmsg": "extramagicwords_desc",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	},
+	"config": {
+		"ExtraMagicWordsClearFixClass": {
+			"description": "Defines a class name for clear fix div",
+			"value": "visualClear"
+		}
+	},
+	"ExtensionMessagesFiles": {
+		"ExtraMagicWordsMagic": "ExtraMagicWords.i18n.magic.php"
+	},
+	"MessagesDirs": {
+		"ExtraMagicWords": ["i18n"]
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "ExtraMagicWordsHookHandler",
+		"GetMagicVariableIDs": "ExtraMagicWordsHookHandler",
+		"ParserGetVariableValueSwitch": "ExtraMagicWordsHookHandler"
+	},
+	"HookHandlers": {
+		"ExtraMagicWordsHookHandler": {
+			"class": "MediaWiki\\Extension\\ExtraMagicWords\\Hooks",
+			"services": ["MainConfig", "WikiPageFactory"]
+		}
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\ExtraMagicWords\\": "includes/"
+	},
+	"manifest_version": 2
+}
